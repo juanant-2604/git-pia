@@ -16,7 +16,7 @@ hombre(tom).
 hombre(bob).
 hombre(jim).
 
-% hermano(X,Y). X es herman de Y, X es hombre
+% hermano(X,Y). X es hermano de Y, X es hombre
 % hermana(X,Y). X es hermana de Y, X es mujer
 
 hermano(X,Y):- progenitor(Z,X), progenitor(Z,Y),hombre(X), dif(X,Y).
