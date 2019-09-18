@@ -1,0 +1,269 @@
+\documentclass[10pt]{article}
+
+\usepackage{newpxmath,newpxtext}
+\usepackage[english,spanish]{babel}
+\usepackage{latexsym,graphicx}
+\usepackage{hyperref}
+
+%%% Código de Computadora
+
+\usepackage{listings}
+
+\lstset{
+  language = Prolog,
+  basicstyle = \scriptsize \ttfamily,
+  numbers = left,
+  numberstyle = \tiny
+}
+
+%%% Teclado y Lenguaje en español
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\selectlanguage{spanish}
+
+\begin{document}
+
+\title{\textbf{Programación para la Inteligencia Artificial} \\
+  Presentación del curso}
+\author{\textbf{Dr. Alejandro Guerra-Hernández} \\
+  Maestría en Inteligencia Artificial \\
+  Universidad Veracruzana \\
+  CIIA -- Centro de Investigación en Inteligencia Artificial \\
+  Sebastián Camacho
+  No 5, Xalapa, Ver., México 91000 \\ \texttt{aguerra@uv.mx} \\
+  \url{http://www.uv.mx/personal/aguerra/}}
+
+\date{13 de Agosto del 2019}
+
+\maketitle
+
+Bienvenidos al curso Programación para la Inteligencia Artificial. La
+Inteligencia Artificial (IA) ha producido lenguajes de programación
+que son a la vez, herramientas y sujeto de estudio de esta
+disciplina. Este curso introduce los paradigmas de Programación
+Lógica, Funcional (y Orientado a Agentes) desde esta perspectiva. Se
+introducen los fundamentos teóricos de ambos paradigmas y se explora
+su uso en problemas característicos de la IA, i.e., estrategias de
+resolución de problemas, búsquedas heurísticas, inducción de árboles
+de decisión, etc., utilizando los lenguajes de programación Prolog,
+Lisp. Se utiliza el problema de inducción de árboles de decisión para
+comparar los lenguajes de programación aquí introducidos.
+
+El curso tiene una duración de 60 horas; se oferta durante un
+semestre, organizado en dos sesiones presenciales de dos horas de
+duración. 
+
+\section{Objetivos}
+\begin{itemize}
+\item El estudiante identificará los conceptos fundamentales de la
+  Programación Lógica y la Programación Funcional, así como sus
+  origenes en la IA.
+\item El estudiante adquirirá las habilidades para resolver problemas
+  complejos con el lenguaje de Programación Lógica Prolog.
+\item El estudiante adquirirá las habilidades para resolver problemas
+  complejos con el lenguaje de Programación Funcional Lisp.
+\item El estudiante podrá generalizar estas habilidades usando otros
+  lenguajes de programación.
+\end{itemize}
+
+\section{Evaluación}
+
+La nota final del curso será calculada de la siguiente forma:
+
+\begin{itemize}
+\item Las tareas/Ejercicios cubren un 50\% de la nota final.
+\item El examen de conocimientos cubre el 20\% de la nota final.
+\item El proyecto integrador cubre el 30\% de la nota final.
+\end{itemize}
+
+Para obtener una \textbf{nota aprobatoria} en el curso, el alumno
+deberá haber obtenido notas aprobatorias en cada uno de los elementos
+de evaluación (aprobar todas sus tareas, examen y proyecto).
+
+\subsection{Tareas}
+
+Las tareas pueden requerir investigación bibliográfica, ejercicios
+teóricos, experimentación en la computadora y/o exposiciones frente a
+grupo.  La entrega y evaluación de éstas se realizará conforme a los
+siguientes lineamentos:
+
+\begin{description}
+\item[Entrega.] Las tareas se entregan al inicio de clase del día
+  designado para ello. El mérito de las mismas decrece 25\% por cada
+  24 horas de retraso. El calendario del curso marca las fechas
+  tentativas para cada tarea, su entrega suele ser dos semanas más
+  tarde.
+\item[Formato.] Las tareas se procesan con \LaTeX, siguiendo la
+  plantilla de este mismo documento. En todas las partes que
+  involucran código de computadora o algoritmos, éste deberá ser
+  documentado apropiadamente (Ver ejemplo del
+  Cuadro~\ref{tab:ejPrograma}).
+
+  \begin{table}
+\begin{lstlisting}[language=Prolog]
+%%% allPerms computa todas las permutaciones de los elementos
+%%% de la lista L en la lista L2. Ejemplo de llamada:
+%%% ?- allPerms([1,2,3],Resp).
+%%% Resp = [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2],
+%%% [3, 2, 1]].
+
+    allPerms(L,L2) :-
+      findall(Perm,permutation(L,Perm),L2).
+\end{lstlisting}
+    \caption{Ejemplo de código de computadora y sus comentarios (Prolog).}
+    \label{tab:ejPrograma}
+  \end{table}
+  
+\item[Evaluación.] Para que un ejercicio o pregunta de la tarea reciba
+  puntaje alguno, más del 50\% deberá estar resuelta de manera
+  correcta. Es más redituable invertir el tiempo en contestar una
+  pregunta de manera correcta y completa, que responder a dos de
+  manera incompleta.
+\end{description}
+
+Cualquier forma de \textbf{plagio} causa la expulsión definitiva del
+curso. Esto incluye: Reportar trabajo de otros como propio y no citar
+pertinentemente las referencias usadas.
+
+\subsection{Examen}
+
+Se trata de una evaluación de los conocimientos teóricos del curso. Su
+fecha de aplicación aparece en el calendario de este documento.
+
+\subsection{Proyecto integrador}
+
+Se trata de un proyecto práctico que requiere la aplicación las
+diversas técnicas introducidas en el curso, posiblemente complementado
+con el contenido de otros cursos de este semestre. Se comienza a
+definir a la mitad del mismo para tratar de integrar los intereses de
+investigación de los estudiantes. Las fechas de revisiones parciales y
+final del proyecto integrador aparecen el en calendario de este
+documento.
+
+\section{Material del curso}
+
+Como es usual en nuestros cursos, el material de clases (notas,
+presentaciones, código) está disponible en mi página personal:
+
+\begin{center}
+  \url{http://www.uv.mx/personal/aguerra/pia/}
+\end{center}
+
+La bibliografía básica está a disposición de ustedes en la biblioteca
+del departamento ó en mi oficina. Algunos de los artículos están
+disponibles en versión electrónica gracias a las suscripciones de
+nuestra biblioteca central y del Conacyt.
+
+Utilizaremos el Mundo de Tarski [1], un popular programa para explorar
+el uso de la lógica de primer orden. Más información
+sobre este programa puede encontrarse en:
+
+\begin{center}
+  \url{https://www.gradegrinder.net/Products/tw-index.html}
+\end{center}
+
+Haremos uso de los siguientes lenguajes de programación, todos ellos
+tiene versiones para diversos sistemas operativos:
+
+\begin{itemize}
+\item \url{http://www.swi-prolog.org}
+\item \url{http://www.sbcl.org}
+\item \url{http://www.lispworks.com}
+\item \url{http://jason.sourceforge.net/wp/}
+\end{itemize}
+
+\section{Calendario}
+
+Este año las sesiones se llevarán a cabo los martes y jueves de 10:00
+a 12:00 hrs., en el salón A-01. Las sesiones se organizarán como
+sigue:
+
+\begin{center}
+  \begin{tabular}{cll}
+    \textbf{Fecha} & \textbf{Tema} & \textbf{Tarea} \\
+    \hline
+    13/08/2018 & Presentación del curso & \\
+    15/08/2018 & Introducción a los Paradigmas Lógico y Funcional & \\
+    20/08/2018 & Programación Lógica, Lógica de Primer Orden & \\
+    22/08/2018 & Programación Lógica, Programas Definitivos & \\
+    27/08/2018 & Programación Orientada a Agentes I & \\
+    29/08/2018 & &  \\
+    03/09/2018 & Programación Lógica, Resolución & T1 \\
+    05/09/2018 & Prolog, Conceptos Básicos I & \\
+    10/09/2018 & &  \\
+    12/09/2018 & Prolog, Búsquedas de Soluciones I & \\
+    17/09/2018 & & \\
+    19/09/2018 & Prolog, Inducción de Arboles de Decisión I & \\
+    24/09/2018 & & T2 \\
+    26/09/2018 & Programación Funcional,  Cálculo-$\lambda$ & \\
+    01/10/2018 &  & \\
+    03/10/2018 & Lisp, Conceptos Básicos I & \\
+    08/10/2018 & & \\
+    10/10/2018 & Lisp, Listas & \\
+    15/10/2018 & Lisp, Macros & T3 \\
+    17/10/2018 & & \\
+    22/10/2018 & Lisp, GPS & \\
+    24/10/2018 & & \\
+    29/10/2018 & Lisp, Bioinformática & \\
+    31/10/2018 & & \\ 
+    05/11/2018 & Lisp, Inducción de Arboles de Decisión & \\
+    07/11/2018 & & \\
+    12/11/2018 & &  T4 \\
+    14/11/2018 & Definición Proyectos Integradores & \\
+    19/11/2018 & Otros Lenguajes I & \\
+    21/11/2019 & & \\
+    26/11/2019 & Otros Lenguajes II & \\
+    28/11/2019 & & \\
+    09/01/2020 & Evaluación proyecto final & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\section*{Referencias}
+
+\begin{enumerate}
+\bibitem{Barker-Plummer2008} {\sc Barker-Plummer, D., Barwise, J.,
+    Etchemendy, J., and Liu, A.}  \newblock {\em Tarski's World,
+    Revised and Expanded}, \newblock CSLI Publications, Stanford, CA.,
+  USA, 2008.
+
+\bibitem{Bordini2007a} {\sc Bordini, R.~H., H{\"u}bner, J.~F., and
+    Wooldridge, M.}  \newblock {\em Programming Multi-Agent Systems in
+    Agent-Speak using Jason}.  \newblock John Wiley \& Sons Ltd, 2007.
+
+\bibitem{Bratko2012} {\sc I.~Bratko.}  \newblock {\em Prolog
+    programming for Artificial Intelligence}.  \newblock Pearson,
+  fourth edition, 2012.
+
+\bibitem{Clocksin2003} {\sc Clocksin, W.~F., and Melish, C.~S.}
+  \newblock {\em Programming in Prolog, using the ISO standard}.
+  \newblock Springer-Verlag, Berlin-Heidelberg, Germany, 2003.
+
+\bibitem{Graham1996} {\sc P.~Graham.}  \newblock {\em ANSI Common
+    Lisp}.  \newblock Prentice Hall Series in Artificial
+  Intelligence. Prentice Hall International, 1996.
+
+\bibitem{Kluge2005} {\sc W.~Kluge.}  \newblock {\em Abstract Computing
+    Machines: A Lambda Calculus Perspective}.  \newblock
+  Springer-Verlag, Berlin Heidelberg New York, 2005.
+
+\bibitem{Nilsson2000} {\sc U.~Nilsson and J.~Maluszynski.}  \newblock
+  {\em Logic, Programming and Prolog}.  \newblock John Wiley \& Sons
+  Ltd, 2nd edition, 2000.
+
+\bibitem{Norvig1992} {\sc P.~Norvig.}  \newblock {\em Paradigms of
+    Artificial Intelligence Programming: Case Studies in Common Lisp}.
+  \newblock Morgan Kauffman Publishers, 1992.
+
+\bibitem{Seibel2005} {\sc P.~Seibel.}  \newblock {\em Practical Common
+    Lisp}.  \newblock Apress, USA, 2005.
+\end{enumerate}
+
+\vspace{\baselineskip}
+\begin{flushright}\noindent
+  Xalapa, Ver., México \hfill {\it Alejandro}\\
+  Agosto 2019 \hfill {\it Guerra-Hernández}\\
+\end{flushright}
+\end{document}
